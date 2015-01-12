@@ -1,7 +1,8 @@
 import sys 
 
 for line in sys.stdin:
-    line_list = line.strip().split("\t")
-    store = line_list[2]
-    price = line_list[4]
-    print store + '\t' + price
+    data = line.strip().split("\t")
+    if len(data) == 6:
+        store = data[2]
+        price = data[4]
+        print store + '\t' + price
